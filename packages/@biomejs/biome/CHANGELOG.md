@@ -1,5 +1,26 @@
 # @biomejs/biome
 
+## 2.3.15
+
+### Patch Changes
+
+- [#9005](https://github.com/biomejs/biome/pull/9005) [`c8dbbbe`](https://github.com/biomejs/biome/commit/c8dbbbe9363fb156a29de174ba7735154f6bc783) Thanks [@corvid-agent](https://github.com/corvid-agent)! - Fixed [#8790](https://github.com/biomejs/biome/issues/8790): The [`noAssignInExpressions`](https://biomejs.dev/linter/rules/no-assign-in-expressions/) rule no longer reports a false positive when an assignment is used as the expression body of an arrow function (e.g., `const f = b => a += b`).
+
+- [#8646](https://github.com/biomejs/biome/pull/8646) [`16fd71d`](https://github.com/biomejs/biome/commit/16fd71da5692f863112e302078325d3be4d79b24) Thanks [@siketyan](https://github.com/siketyan)! - Fixed [#8605](https://github.com/biomejs/biome/issues/8605): Text expressions in some template languages (`{{ expr }}` or `{ expr }`) at the top level of an HTML document no longer causes panicking.
+
+- [#8930](https://github.com/biomejs/biome/pull/8930) [`51c158e`](https://github.com/biomejs/biome/commit/51c158e803f9bad561cf5b79365c339e9069d614) Thanks [@ANKANJAGTAP](https://github.com/ANKANJAGTAP)! - Fixed #8917
+  [useExhaustiveDependencies](https://biomejs.dev/linter/rules/use-exhaustive-dependencies/) now correctly detects JSX component identifiers as hook dependencies.
+
+- [#9009](https://github.com/biomejs/biome/pull/9009) [`7d229c7`](https://github.com/biomejs/biome/commit/7d229c7ca3930ff56e3a229a70b994f1d5fd1086) Thanks [@Netail](https://github.com/Netail)! - Fixed typo in [noPositiveTabindex](https://biomejs.dev/linter/rules/no-positive-tabindex/)'s quick fix text.
+
+- [#8848](https://github.com/biomejs/biome/pull/8848) [`2cba2b3`](https://github.com/biomejs/biome/commit/2cba2b3996447dab1d653dd8c8ee97eddd0bb63b) Thanks [@LouisLau-art](https://github.com/LouisLau-art)! - Fixed [#8845](https://github.com/biomejs/biome/issues/8845). Now `useGenericFontNames` doesn't trigger when `font` is declared inside the `@supports` at-rule.
+
+- [#8997](https://github.com/biomejs/biome/pull/8997) [`a5f3212`](https://github.com/biomejs/biome/commit/a5f321284249e21b9dda9fdc9130974c47df8a99) Thanks [@mldangelo](https://github.com/mldangelo)! - Fixed [#8476](https://github.com/biomejs/biome/issues/8476).
+  [useAwaitThenable](https://biomejs.dev/linter/rules/use-await-thenable/) no longer reports false positives for `await` on call expressions whose return type cannot be resolved (e.g., cross-module function calls to Node.js builtins or npm packages).
+
+- [#8978](https://github.com/biomejs/biome/pull/8978) [`cc7a478`](https://github.com/biomejs/biome/commit/cc7a4785f47a2c2a5ba3ea4ef90937742a2cd347) Thanks [@FrankFMY](https://github.com/FrankFMY)! - Fixed [#8645](https://github.com/biomejs/biome/issues/8645).
+  [useAwait](https://biomejs.dev/linter/rules/use-await/) no longer reports `async` generator functions that use `yield*`, since `yield*` in an async generator delegates to an `AsyncIterable` and requires the `async` modifier.
+
 ## 2.3.14
 
 ### Patch Changes
